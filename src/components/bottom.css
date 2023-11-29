@@ -1,0 +1,18 @@
+.b1{
+    height: 60px;
+    background-color: rgb(235, 203, 187);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bt{
+    height: 40px;
+    width: 80px;
+    font-size: 20px;
+    background-color: rgb(108, 153, 154);
+    border: none;
+    border-radius: 20px;
+}
+.bt:hover{
+    background-color: red;
+}

@@ -1,0 +1,15 @@
+.img-box{
+    padding: 40px;
+    background-color:rgb(108, 153, 154) ;
+    border-top-right-radius: 150px;
+    border-top-left-radius: 150px;
+    height: 100%;
+}
+.img{
+    margin-top: 40px;
+    border-radius: 10px;
+} 
+/* .side-up{
+ padding : 30px;
+ padding-bottom: 0px;
+} */

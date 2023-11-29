@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.sec1{
+    background-color:rgb(235, 203, 187);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 40px;
+    
+}
+.d1{
+    background-color: rgb(235, 203, 187);
+    display: flex;
+    justify-content: end;
+}
+.d2{
+    height: 40px;
+    width: 350px;
+    background-color: rgb(108, 153, 154);
+    border-bottom-left-radius: 100px;
+}
+.sec2{
+    display: flex;
+    justify-content: center;
+    column-gap: 40px;
+    background-color: antiquewhite;
+}
+
+.s2-2{
+    width: 500px;
+    height: 20px;
+}
+.exp{
+    padding: 20px 0px;
+
+}
+.skills{
+    display: flex;
+}
