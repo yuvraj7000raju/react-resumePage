@@ -1,11 +1,15 @@
+import { useState } from "react";
 import "./bottom.css";
-
+let val= true;
 function Bottom({btn,play,pause,children}){
-    let val= true;
+    const [num , changeNum] = useState(0);
     function onclick(){
-       let l = val ? play() : pause() ;
+        let l = val ? play() : pause() ;
 
-       val = !val;
+        val = !val;
+         changeNum( (num)=> num+1);
+
+         console.log("rendered");
     }
 
     return (
@@ -14,6 +18,7 @@ function Bottom({btn,play,pause,children}){
                 <button className="bt" onClick={onclick}>
                         {children}
                 </button>
+                <div className="txt">{num}</div>
             </div>
         </div>
     )
