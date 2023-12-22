@@ -21,6 +21,9 @@
     background-color: rgb(108, 153, 154);
     border-bottom-left-radius: 100px;
 }
+.suffel{
+    background-color: darkgreen;
+}
 .sec2{
     display: flex;
     justify-content: center;

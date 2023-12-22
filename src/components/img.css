@@ -5,6 +5,11 @@
     border-top-left-radius: 150px;
     height: 100%;
 }
+
+.suffel{
+    background-color: darkgreen;
+}
+
 .img{
     margin-top: 40px;
     border-radius: 10px;

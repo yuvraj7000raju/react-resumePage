@@ -6,7 +6,8 @@ import Skill from "./components/skills";
 import Bottom from "./components/bottom";
 import Form from "./components/form";
 import "./App.css";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import ThemeContext from "./context/theme";
 let x = " Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptas eveniet dolore enim architecto dolores minima quos? Veniam ducimus explicabo praesentium "
 
 let obj={
@@ -21,10 +22,10 @@ let obj={
 
 obj.experence.push("hello word");
 
-
 function App() {
-
 const [obji, update] = useState(obj.experence);
+const [mode, changemode] = useState("Y");
+const Theme = useContext(ThemeContext);
 
 console.log(obji);
 
@@ -33,11 +34,23 @@ function add (){
   console.log(obji);
 }
 
+function changing_mode(mode){
+  console.log(mode)
+  console.log(Theme)
+  if(mode === "Y"){
+      changemode("suffel")
+  }
+  else{
+      changemode("Y")
+  }
+}
+
 
   return (
+    <ThemeContext.Provider value={mode}>
     <div className="potfolio">
       <div className="d1">
-            <div className="d2">
+            <div className={`d2 ${mode}`}>
 
             </div>
           </div>
@@ -75,10 +88,11 @@ function add (){
         </div>
       </div>
 
-      <Bottom btn="like" play={add} pause={()=> console.log("pause")}>like</Bottom>
+      <Bottom btn="like" play={add} modes={changing_mode} mode ={mode} pause={()=> console.log("pause")}>like</Bottom>
 
       {/* <Form update={add}></Form> */}
     </div>
+    </ThemeContext.Provider>
   )
 }
 export default App;

@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import "./left.css";
+import ThemeContext from "../context/theme";
 
 function Left({topic, content}){
     // let str = " <li> ";
@@ -6,8 +8,10 @@ function Left({topic, content}){
     //     str = str.concat(element," </li> ")
     // });
 
+    const Theme = useContext(ThemeContext);
+
      return(
-        <div className="comp">
+        <div className={`comp ${Theme}`}>
             <div className="head">
                 {topic}
             </div>
