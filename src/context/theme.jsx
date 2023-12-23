@@ -1,5 +1,5 @@
 import { createContext } from "react";
 
-const ThemeContext = createContext("suffel");
+const ThemeContext = createContext(null);
 
 export default ThemeContext; 

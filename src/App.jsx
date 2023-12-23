@@ -10,7 +10,7 @@ import { useContext, useState } from "react";
 import ThemeContext from "./context/theme";
 let x = " Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas voluptas eveniet dolore enim architecto dolores minima quos? Veniam ducimus explicabo praesentium "
 
-let obj={
+let obj={ 
   ed1 : "Education",
   ed2 : "Content",
   ed3 : "Achivement",
@@ -24,33 +24,28 @@ obj.experence.push("hello word");
 
 function App() {
 const [obji, update] = useState(obj.experence);
-const [mode, changemode] = useState("Y");
 const Theme = useContext(ThemeContext);
-
-console.log(obji);
+const[mode,updateMode] = useState("default");
 
 function add (){
   update([...obji,"tiger"]);
   console.log(obji);
 }
 
-function changing_mode(mode){
-  console.log(mode)
+function modeChange(mode){
+  updateMode( (mode) => mode === "default" ? "suffel" : "default")
   console.log(Theme)
-  if(mode === "Y"){
-      changemode("suffel")
-  }
-  else{
-      changemode("Y")
-  }
 }
 
+// function modeChange() {
+//   updateMode((prevMode) => (prevMode === "default" ? "suffel" : "default"));
+// }
 
   return (
     <ThemeContext.Provider value={mode}>
     <div className="potfolio">
       <div className="d1">
-            <div className={`d2 ${mode}`}>
+            <div className={`d2 ${mode}`} onClick={()=>console.log(Theme)}>
 
             </div>
           </div>
@@ -88,7 +83,7 @@ function changing_mode(mode){
         </div>
       </div>
 
-      <Bottom btn="like" play={add} modes={changing_mode} mode ={mode} pause={()=> console.log("pause")}>like</Bottom>
+      <Bottom btn="like" play={add} prewiew ={modeChange} pause={()=> console.log("pause")}>like</Bottom>
 
       {/* <Form update={add}></Form> */}
     </div>
